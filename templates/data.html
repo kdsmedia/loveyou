@@ -13,24 +13,3 @@
             <p><strong>IP:</strong> {{ data.ip }}</p>
             <p><strong>City:</strong> {{ data.location.city }}</p>
             <p><strong>Region:</strong> {{ data.location.regionName }}</p>
-            <p><strong>Country:</strong> {{ data.location.country }}</p>
-            <p><strong>ISP:</strong> {{ data.location.isp }}</p>
-            <p><strong>Latitude:</strong> {{ data.location.lat }}</p>
-            <p><strong>Longitude:</strong> {{ data.location.lon }}</p>
-        {% else %}
-            <p>No data available.</p>
-        {% endif %}
-        <a href="/">Back to Home</a>
-        <h2>All Data Entries</h2>
-        {% if data_list %}
-            <ul>
-                {% for entry in data_list %}
-                    <li>IP: {{ entry.ip }} | City: {{ entry.location.city }} | Country: {{ entry.location.country }}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No data entries available.</p>
-        {% endif %}
-    </div>
-</body>
-</html>
