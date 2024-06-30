@@ -3,34 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data</title>
+    <title>IP & Location Tracker</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>IP & Location Data</h1>
-        {% if data %}
-            <p><strong>IP:</strong> {{ data.ip }}</p>
-            <p><strong>City:</strong> {{ data.location.city }}</p>
-            <p><strong>Region:</strong> {{ data.location.regionName }}</p>
-            <p><strong>Country:</strong> {{ data.location.country }}</p>
-            <p><strong>ISP:</strong> {{ data.location.isp }}</p>
-            <p><strong>Latitude:</strong> {{ data.location.lat }}</p>
-            <p><strong>Longitude:</strong> {{ data.location.lon }}</p>
-        {% else %}
-            <p>No data available.</p>
-        {% endif %}
-        <a href="/">Back to Home</a>
-        <h2>All Data Entries</h2>
-        {% if data_list %}
-            <ul>
-                {% for entry in data_list %}
-                    <li>IP: {{ entry.ip }} | City: {{ entry.location.city }} | Country: {{ entry.location.country }}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No data entries available.</p>
-        {% endif %}
+    <div class="hero-section">
+        <div class="container">
+            <h1>IP & Location Tracker</h1>
+            <p>Ketahui IP dan lokasi Anda dengan mudah. Klik tombol di bawah ini untuk melanjutkan.</p>
+            <form action="/track" method="POST">
+                <button type="submit">Get My IP & Location</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
