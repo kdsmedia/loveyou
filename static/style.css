@@ -1,23 +1,48 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero-section {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
 }
 
 form {
@@ -25,26 +50,40 @@ form {
     flex-direction: column;
 }
 
-label {
-    margin-bottom: 5px;
-}
-
-input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 button {
-    padding: 10px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    background: #00b4db;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: #0083b0;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 50px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+    }
 }
