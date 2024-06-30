@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Profile Tracker</title>
+    <title>IP & Location Tracker</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>TikTok Profile Tracker</h1>
-        <form action="/track" method="POST">
-            <label for="url">TikTok Profile URL:</label>
-            <input type="text" id="url" name="url" placeholder="https://www.tiktok.com/@username" required>
-            <button type="submit">Track</button>
-        </form>
+    <div class="hero-section">
+        <div class="container">
+            <h1>IP & Location Tracker</h1>
+            <p>Ketahui IP dan lokasi Anda dengan mudah. Klik tombol di bawah ini untuk melanjutkan.</p>
+            <form action="/track" method="POST">
+                <button type="submit">Get My IP & Location</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
