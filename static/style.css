@@ -1,89 +1,65 @@
-/* Reset CSS */
-* {
+/* Style untuk index.html dan data.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    line-height: 1.6;
 }
 
 .hero-section {
-    background: linear-gradient(to right, #00b4db, #0083b0);
-    color: #fff;
-    padding: 100px 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 50px 0;
     text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 1.2em;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 30px;
-    max-width: 500px;
+    width: 80%;
     margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
 }
 
 button {
-    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    background: #00b4db;
-    color: #fff;
-    font-size: 1.2em;
-    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1em;
 }
 
 button:hover {
-    background: #0083b0;
+    background-color: #218838;
 }
 
-button:focus {
-    outline: none;
+h1, h2 {
+    color: #007bff;
 }
 
-@media (max-width: 600px) {
-    .hero-section {
-        padding: 50px 10px;
-    }
+a {
+    text-decoration: none;
+    color: #007bff;
+}
 
-    h1 {
-        font-size: 2em;
-    }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    p {
-        font-size: 1em;
-    }
-
-    button {
-        font-size: 1em;
-    }
+li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
